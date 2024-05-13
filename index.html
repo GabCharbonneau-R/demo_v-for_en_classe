@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple V-for</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <h2>Exemple simple</h2>
+            <p v-for="nombre of nombres">
+                {{nombre}}                
+            </p>            
+            <h2>Exemple objet simple</h2>
+            <p v-for="item of items">
+                {{item.message}}                
+            </p>            
+            <h2>Exemple valeur et index</h2>
+            <p v-for="(value, key, index) of monObjet">
+                {{index}}.{{key}}: {{value}}                
+            </p>            
+            
+            <h2>Exemple range</h2>
+            <p v-for="i of 10">
+                {{i}}
+                
+            </p>
+            <h2>Exemple filtre de nombres pairs</h2>
+            <p v-for="n of nombrePairs">
+                {{n}}
+                
+            </p>
+            <h2>Exemple filtre conditionnel</h2>
+            <p v-for="num of nombres.filter(filtreNom)">
+                {{num}}
+                
+            </p> 
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
